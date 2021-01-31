@@ -189,7 +189,8 @@ void ImgurUploader::openURL()
 
 void ImgurUploader::copyURL()
 {
-    QApplication::clipboard()->setText(m_imageURL.toString());
+    //QApplication::clipboard()->setText(m_imageURL.toString());
+    QApplication::clipboard()->setText("[img]" + m_imageURL.toString() + "[/img]");
     m_notification->showMessage(tr("URL copied to clipboard."));
 }
 
